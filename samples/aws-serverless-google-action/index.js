@@ -135,4 +135,4 @@ voxaApp.onState("GetFact", voxaEvent => {
 });
 
 const dialogFlowAction = new DialogFlowPlatform(voxaApp);
-exports.handler = alexaSkill.lambdaHTTP();
+exports.handler = dialogFlowAction.lambdaHTTP();
