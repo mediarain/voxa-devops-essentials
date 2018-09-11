@@ -1,4 +1,4 @@
-# Voxa3 Serverless Alexa Example
+# Voxa3 AWS SAM Alexa Example
 Example of deploying a Lambda function used by an Alexa skill. For more details on this solution, see [Use AWS CodePipeline to deploy Amazon Alexa skill](https://stelligent.com/2017/07/25/use-aws-codepipeline-to-deploy-amazon-alexa-skill/
 ). 
 
@@ -17,7 +17,7 @@ This repo is a demonstration of Continuous Delivery of an Alexa skill via CodePi
 1. From Outputs, click on the **PipelineUrl** output. The Source action will be in a failed state.
 1. From the CodePipeline Source action, click on the CodeCommit provider and copy the **git clone** statement provided by CodeCommit
 1. Paste the command in your Terminal
-1. From [this](../serverless/alexa) folder, copy **all files** to your locally cloned Git repo
+1. From this folder, copy **all files** to your locally cloned Git repo
 1. From your Terminal, go to the directory of your locally cloned Git repo and type `git add .`
 1. From your Terminal (and from the same locally-cloned Git repo directory), type `git commit -am "add new files"`
 1. From your Terminal (and from the same locally-cloned Git repo directory), type `git push`

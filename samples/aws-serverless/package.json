@@ -1,0 +1,9 @@
+{
+  "name": "aws-serverless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "voxa": "^3.0.0-alpha30"
+  }
+}
