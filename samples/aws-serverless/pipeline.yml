@@ -171,7 +171,7 @@ Resources:
       Artifacts:
         Type: no_artifacts
       Environment:
-        environmentVariables:
+        EnvironmentVariables:
         - Name: S3_BUCKET
           Value:
             Ref: ArtifactBucket

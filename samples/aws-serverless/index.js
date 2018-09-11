@@ -117,12 +117,12 @@ voxaApp.onIntent("StopIntent", {
 });
 
 voxaApp.onState("GetFact", voxaEvent => {
-  const factArr = voxaEvent.t("FACTS");
+  const factArr = voxaEvent.t("FACTS", { returnObjects: true });
   const factIndex = Math.floor(Math.random() * factArr.length);
   const randomFact = factArr[factIndex];
 
   // Create speech output
-  const speechOutput = this.t("GET_FACT_MESSAGE") + randomFact;
+  const speechOutput = voxaEvent.t("GET_FACT_MESSAGE") + randomFact;
   return {
     flow: "terminate",
     sayp: speechOutput,
