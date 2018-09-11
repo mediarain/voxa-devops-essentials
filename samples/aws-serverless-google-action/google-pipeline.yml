@@ -157,7 +157,7 @@ Resources:
             Action: "*"
             Resource: "*"
           Version: '2012-10-17'
-  CodeBuildAlexa:
+  CodeBuildGoogle:
     Type: AWS::CodeBuild::Project
     DependsOn: CodeBuildRole
     Properties:
@@ -216,7 +216,7 @@ Resources:
   CodePipelineStack:
     Type: AWS::CodePipeline::Pipeline
     DependsOn:
-    - CodeBuildAlexa
+    - CodeBuildGoogle
     - LambdaTrustRole
     Properties:
       RoleArn:
@@ -255,15 +255,15 @@ Resources:
             Version: '1'
             Provider: CodeBuild
           OutputArtifacts:
-          - Name: alexa-BuildArtifact
+          - Name: google-BuildArtifact
           Configuration:
             ProjectName:
-              Ref: CodeBuildAlexa
+              Ref: CodeBuildGoogle
           RunOrder: 1
       - Name: Deploy
         Actions:
         - InputArtifacts:
-          - Name: alexa-BuildArtifact
+          - Name: google-BuildArtifact
           Name: GenerateChangeSet
           ActionTypeId:
             Category: Deploy
@@ -287,7 +287,7 @@ Resources:
                 - "-"
                 - Ref: AWS::Region
                 - ""
-            TemplatePath: alexa-BuildArtifact::template-export.json
+            TemplatePath: google-BuildArtifact::template-export.json
           RunOrder: 1
         - ActionTypeId:
             Category: Deploy
