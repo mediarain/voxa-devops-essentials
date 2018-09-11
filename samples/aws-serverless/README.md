@@ -9,7 +9,7 @@ This repo is a demonstration of Continuous Delivery of an Alexa skill via CodePi
 
 # Launch Stack
 
-[![Launch CFN stack](https://s3.amazonaws.com/www.devopsessentialsaws.com/img/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#cstack=sn%7Edevops-essentials-alexa%7Cturl%7Ehttps://rawgit.com/mediarain/voxa-devops-essentials/dev/aws-serverless/pipeline-alexa.yml)
+[![Launch CFN stack](https://s3.amazonaws.com/www.devopsessentialsaws.com/img/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#cstack=sn%7Edevops-essentials-alexa%7Cturl%7Ehttps://s3.amazonaws.com/voxa-playground/pipeline.yml)
 
 # Configure Solution
 
