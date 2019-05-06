@@ -4,6 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "voxa": "^3.0.0-alpha30"
-  }
+    "voxa": "^3.0.0-alpha30",
+    "snyk": "^1.161.1"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
